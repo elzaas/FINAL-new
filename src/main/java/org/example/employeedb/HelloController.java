@@ -221,46 +221,35 @@ public class HelloController {
     }
     @FXML
     private void handleSearch() {
-        String searchText = textFieldSearch.getText().toLowerCase().trim(); // Make search case-insensitive and trim extra spaces
+        String searchText = textFieldSearch.getText().toLowerCase().trim(); // Нормализуем ввод пользователя
         List<Employee> filteredEmployees = employeeDAO.getAllEmployees().stream()
                 .filter(emp -> {
-                    boolean matches = false;
-
-                    // Debugging: print employee gender and search term
-                    System.out.println("Searching for: " + searchText);
-                    System.out.println("Checking employee: " + emp.getName() + " Gender: " + emp.getGender());
-
-                    // Check if the employee's ID or name matches the search text
-                    if (String.valueOf(emp.getId()).equals(searchText) || emp.getName().toLowerCase().contains(searchText)) {
-                        matches = true;
+                    // Проверяем совпадения по ID, имени, полу или позиции
+                    if (String.valueOf(emp.getId()).equals(searchText)) {
+                        return true;
                     }
-
-                    // Check if the salary matches the search text
-                    try {
-                        double salaryFilter = Double.parseDouble(searchText);
-                        if (emp.getSalary() == salaryFilter) {
-                            matches = true;
-                        }
-                    } catch (NumberFormatException e) {
-                        // Not a valid number, so skip salary filter
+                    if (emp.getName().toLowerCase().contains(searchText)) {
+                        return true;
                     }
-
-                    // Check if the employee's gender matches the search text (case insensitive)
                     if (emp.getGender().toLowerCase().contains(searchText)) {
-                        matches = true;
+                        return true;
                     }
-
-                    return matches;
+                    if (emp.getPosition().toLowerCase().contains(searchText)) {
+                        return true;
+                    }
+                    return false;
                 })
                 .collect(Collectors.toList());
 
-        // Debugging: print number of results
-        System.out.println("Filtered Results Count: " + filteredEmployees.size());
+        // Отладочная информация
+        System.out.println("Количество подходящих записей: " + filteredEmployees.size());
+        filteredEmployees.forEach(emp -> System.out.println(
+                "Сотрудник: " + emp.getName() + ", Позиция: " + emp.getPosition() + ", Пол: " + emp.getGender()
+        ));
 
+        // Обновляем TableView
         tableViewEmployees.getItems().setAll(filteredEmployees);
-        System.out.println("Current TableView item count: " + tableViewEmployees.getItems().size());
         tableViewEmployees.refresh();
-        ;
     }
 
     // Show all employees
