@@ -14,34 +14,34 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 
-<AnchorPane prefHeight="517.0" prefWidth="684.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.employeedb.HelloController">
+<AnchorPane prefHeight="517.0" prefWidth="684.0" style="-fx-background-color: #93d1ff;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.employeedb.HelloController">
     <children>
         <AnchorPane layoutY="1.0" prefHeight="306.0" prefWidth="664.0" style="-fx-background-color: #93d1ff;">
             <children>
                 <AnchorPane layoutX="321.0" prefHeight="307.0" prefWidth="363.0" style="-fx-background-color: #93d1ff;">
                     <children>
-                        <AnchorPane layoutX="107.0" layoutY="80.0" prefHeight="200.0" prefWidth="200.0">
+                        <AnchorPane layoutX="107.0" layoutY="80.0" prefHeight="269.0" prefWidth="315.0">
                             <children>
                                 <AnchorPane layoutX="-29.0" layoutY="101.0" prefHeight="25.0" prefWidth="200.0">
                                     <children>
-                                        <AnchorPane layoutX="32.0" layoutY="-20.0" prefHeight="140.0" prefWidth="222.0">
+                                        <AnchorPane layoutX="32.0" layoutY="-20.0" prefHeight="188.0" prefWidth="307.0">
                                             <children>
-                                                <TextField fx:id="textFieldSearch" layoutX="42.0" layoutY="14.0" promptText="Search by ID or Name" />
-                                                <Button layoutX="146.0" layoutY="50.0" onAction="#handleSearch" text="Search" />
+                                                <TextField fx:id="textFieldSearch" layoutX="136.0" layoutY="14.0" promptText="Search by ID or Name" />
+                                                <Button layoutX="238.0" layoutY="49.0" onAction="#handleSearch" style="-fx-background-color: #608BC1;" text="Search" />
                                                 <!-- Labels for gender count and salary -->
-                                                <Label fx:id="labelMaleCount" layoutX="67.0" layoutY="54.0" style="-fx-font-size: 14px;" text="Male: 0" />
-                                                <Label fx:id="labelFemaleCount" layoutX="60.0" layoutY="76.0" style="-fx-font-size: 14px;" text="Female: 0" />
-                                                <Label fx:id="labelHighestSalary" layoutX="60.0" layoutY="96.0" style="-fx-font-size: 14px;" text="Highest Salary: " />
+                                                <Label fx:id="labelMaleCount" layoutX="244.0" layoutY="94.0" style="-fx-font-size: 14px;" text="Male: 0" />
+                                                <Label fx:id="labelFemaleCount" layoutX="244.0" layoutY="119.0" style="-fx-font-size: 14px;" text="Female: 0" />
                                                 <Label fx:id="labelLowestSalary" layoutX="61.0" layoutY="170.0" style="-fx-font-size: 14px;" text="Lowest Salary: " />
-                                      <Button layoutY="144.0" onAction="#handleRemoveEmployee" prefHeight="26.0" prefWidth="114.0" style="-fx-background-color: #956dc9;" text="Remove Employee" />
-                                      <Button layoutX="71.0" layoutY="114.0" onAction="#handleShowStats" prefHeight="26.0" prefWidth="151.0" style="-fx-background-color: #ffed71;" text="Show Stats" />
+                                      <Button layoutX="98.0" layoutY="148.0" onAction="#handleRemoveEmployee" prefHeight="26.0" prefWidth="127.0" style="-fx-background-color: #B9E5E8;" text="Remove Employee" />
+                                      <Button layoutX="230.0" layoutY="148.0" onAction="#handleCalculateSalaries" prefHeight="26.0" prefWidth="132.0" style="-fx-background-color: CBDCEB;" text="Calculate Salaries" />
+                                      <Button layoutX="-25.0" layoutY="148.0" onAction="#handleDeleteAll" prefHeight="26.0" prefWidth="114.0" style="-fx-background-color: #4A628A;" text="Delete All" />
                                             </children>
                                         </AnchorPane>
                                     </children>
                                 </AnchorPane>
                             </children>
                         </AnchorPane>
-                    <Button layoutX="266.0" layoutY="308.0" onAction="#handleCalculateSalaries" prefHeight="26.0" prefWidth="151.0" style="-fx-background-color: #edb2b2;" text="Calculate Salaries" />
+                    <Button layoutX="-46.0" layoutY="309.0" onAction="#handleShowAll" prefHeight="26.0" prefWidth="121.0" style="-fx-background-color: #7AB2D3;" text="Show All" />
                     </children>
                 </AnchorPane>
                 <DatePicker fx:id="datePickerHireDate" layoutX="29.0" layoutY="278.0" prefHeight="26.0" prefWidth="160.0" />
@@ -69,30 +69,28 @@
                 </ComboBox>
                 <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="-14.0" pickOnBounds="true" preserveRatio="true" />
                 <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="29.0" layoutY="-26.0" pickOnBounds="true" preserveRatio="true" />
-                <ImageView fitHeight="157.0" fitWidth="694.0" layoutX="-2.0">
+                <ImageView fitHeight="157.0" fitWidth="855.0" layoutX="-2.0">
                     <image>
                         <Image url="@../../../images/erp.png" />
                     </image>
                 </ImageView>
+              <Button layoutX="38.0" layoutY="309.0" onAction="#handleAddEmployee" prefHeight="26.0" prefWidth="98.0" style="-fx-background-color: #DFF2EB;" text="Add Employee" />
+              <Button layoutX="149.0" layoutY="309.0" onAction="#handleUpdateEmployee" prefHeight="26.0" prefWidth="114.0" style="-fx-background-color: #B9E5E8;" text="Update Employee" />
             </children>
         </AnchorPane>
         <HBox prefHeight="0.0" prefWidth="642.0" style="-fx-background-color: #93d1ff;" />
-        <TableView fx:id="tableViewEmployees" layoutX="2.0" layoutY="332.0" prefHeight="185.0" prefWidth="686.0" style="-fx-background-color: #42c0f0;">
+        <TableView fx:id="tableViewEmployees" layoutX="-4.0" layoutY="336.0" prefHeight="205.0" prefWidth="859.0" style="-fx-background-color: #42c0f0;">
             <columns>
-                <TableColumn fx:id="columnEmployeeName" prefWidth="60.0" text="Name" />
-                <TableColumn fx:id="columnEmployeePosition" prefWidth="61.0" text="Position" />
-                <TableColumn fx:id="columnEmployeeSalary" prefWidth="69.0" text="Salary" />
-                <TableColumn fx:id="columnEmployeeHireDate" prefWidth="78.0" text="Hire Date" />
-                <TableColumn fx:id="columnEmploymentType" prefWidth="60.0" text="Employment Type" />
-                <TableColumn fx:id="columnPhoneNumber" prefWidth="85.0" text="Phone Number" />
-                <TableColumn fx:id="columnGender" minWidth="4.0" prefWidth="81.0" text="Gender" />
-                <TableColumn fx:id="columnEmail" minWidth="4.0" prefWidth="91.0" text="Email" />
-                <TableColumn fx:id="columnCalculatedSalary" text="Calculated Salary" />
+                <TableColumn fx:id="columnEmployeeName" prefWidth="86.0" text="Name" />
+                <TableColumn fx:id="columnEmployeePosition" prefWidth="98.0" text="Position" />
+                <TableColumn fx:id="columnEmployeeSalary" prefWidth="94.0" text="Salary" />
+                <TableColumn fx:id="columnEmployeeHireDate" prefWidth="92.0" text="Hire Date" />
+                <TableColumn fx:id="columnEmploymentType" prefWidth="87.0" text="Employment Type" />
+                <TableColumn fx:id="columnPhoneNumber" minWidth="8.0" prefWidth="114.0" text="Phone Number" />
+                <TableColumn fx:id="columnGender" minWidth="4.0" prefWidth="89.0" text="Gender" />
+                <TableColumn fx:id="columnEmail" minWidth="4.0" prefWidth="87.0" text="Email" />
+                <TableColumn fx:id="columnCalculatedSalary" prefWidth="111.0" text="Calculated Salary" />
             </columns>
         </TableView>
-        <Button layoutX="-2.0" layoutY="307.0" onAction="#handleAddEmployee" prefHeight="26.0" prefWidth="98.0" style="-fx-background-color: #34ed65;" text="Add Employee" />
-        <Button layoutX="96.0" layoutY="307.0" onAction="#handleUpdateEmployee" prefHeight="26.0" prefWidth="114.0" style="-fx-background-color: #34ed65;" text="Update Employee" />
-        <Button layoutX="210.0" layoutY="307.0" onAction="#handleShowAll" prefHeight="26.0" prefWidth="107.0" style="-fx-background-color: #34ed65;" text="Show All" />
-        <Button layoutX="316.0" layoutY="307.0" onAction="#handleDeleteAll" prefHeight="26.0" prefWidth="114.0" style="-fx-background-color: #ff271d;" text="Delete All" />
     </children>
 </AnchorPane>

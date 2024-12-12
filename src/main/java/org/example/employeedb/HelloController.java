@@ -4,7 +4,7 @@ package org.example.employeedb;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-        import java.time.LocalDate;
+import java.time.LocalDate;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -172,22 +172,22 @@ public class HelloController {
         showAlert("Success", "Employee updated successfully!");
 
 
-            // Update employee properties (as before)
+        // Update employee properties (as before)
 
 
-            // Update the employee in the database
-            employeeDAO.updateEmployee(selectedEmployee);
+        // Update the employee in the database
+        employeeDAO.updateEmployee(selectedEmployee);
 
-            // Clear the selection and refresh the TableView
-            tableViewEmployees.getSelectionModel().clearSelection();
-            refreshTableView();
+        // Clear the selection and refresh the TableView
+        tableViewEmployees.getSelectionModel().clearSelection();
+        refreshTableView();
 
-            // Re-select the updated employee (optional)
-            tableViewEmployees.getSelectionModel().select(selectedEmployee);
+        // Re-select the updated employee (optional)
+        tableViewEmployees.getSelectionModel().select(selectedEmployee);
 
-            clearFields();
-            showAlert("Success", "Employee updated successfully!");
-        }
+        clearFields();
+        showAlert("Success", "Employee updated successfully!");
+    }
 
 
     // Show an alert dialog
