@@ -28,12 +28,12 @@
    
 2. Open the project in your IDE.3. Build the project to resolve dependencies.
 4. Run the Main class to start the application.
-## Usage1. Login:
+###  Usage1. Login:
    - Enter the administrator username and password to access the dashboard.2. Manage Employees:
    - Navigate to the "Employee Management" section to add, edit, or remove employee records.3. Calculate Salaries:
    - Use the salary calculation feature to compute and display employee earnings based on their type.4. Visualize Data:
    - Access the "Statistics" tab to view graphical insights into employee distribution.
-## Class Overview### Employee Class
+###  Class Overview### Employee Class
 - Models employee data with fields for name, position, salary, etc.
 - Includes constructors, getters, and setters for data encapsulation.
 ### EmploymentType Enum- Defines employee types: Permanent, Part-Time, Contractor.
@@ -52,5 +52,25 @@
 3. Commit your changes: git commit -m 'Add new feature'.4. Push to your branch: git push origin feature-name.
 5. Create a pull request.
 ## LicenseThis project is licensed under the MIT License. See the LICENSE file for details.
-## Contact
-For any inquiries or feedback, please contact [Your Name] at your_email@example.com.
+
+
+
+
+
+### links:
+
+
+
+Documentation:  https://docs.google.com/document/d/1tl3I-XU3Ce-mcSsweaR0Idb4B1ERwnHk/edit?usp=drive_link&ouid=100922547310916559233&rtpof=true&sd=true
+
+
+
+ Video :https:  //drive.google.com/file/d/1EyIBnGSZMs8DrCs2MlYuamvgLLWla03Y/view?usp=drive_link
+
+
+
+
+Presentations:   https://drive.google.com/file/d/1EyIBnGSZMs8DrCs2MlYuamvgLLWla03Y/view?usp=drive_link
+
+
+
