@@ -219,26 +219,48 @@ public class HelloController {
             showAlert("Error", "Please select an employee to remove.");
         }
     }
-
-    // Search employees based on the search text
     @FXML
     private void handleSearch() {
-        String searchText = textFieldSearch.getText();
+        String searchText = textFieldSearch.getText().toLowerCase().trim(); // Make search case-insensitive and trim extra spaces
         List<Employee> filteredEmployees = employeeDAO.getAllEmployees().stream()
                 .filter(emp -> {
-                    if (String.valueOf(emp.getId()).equals(searchText) || emp.getName().equalsIgnoreCase(searchText)) {
-                        return true;
+                    boolean matches = false;
+
+                    // Debugging: print employee gender and search term
+                    System.out.println("Searching for: " + searchText);
+                    System.out.println("Checking employee: " + emp.getName() + " Gender: " + emp.getGender());
+
+                    // Check if the employee's ID or name matches the search text
+                    if (String.valueOf(emp.getId()).equals(searchText) || emp.getName().toLowerCase().contains(searchText)) {
+                        matches = true;
                     }
 
+                    // Check if the salary matches the search text
                     try {
                         double salaryFilter = Double.parseDouble(searchText);
-                        return emp.getSalary() == salaryFilter;
+                        if (emp.getSalary() == salaryFilter) {
+                            matches = true;
+                        }
                     } catch (NumberFormatException e) {
-                        return false;
+                        // Not a valid number, so skip salary filter
                     }
+
+                    // Check if the employee's gender matches the search text (case insensitive)
+                    if (emp.getGender().toLowerCase().contains(searchText)) {
+                        matches = true;
+                    }
+
+                    return matches;
                 })
                 .collect(Collectors.toList());
+
+        // Debugging: print number of results
+        System.out.println("Filtered Results Count: " + filteredEmployees.size());
+
         tableViewEmployees.getItems().setAll(filteredEmployees);
+        System.out.println("Current TableView item count: " + tableViewEmployees.getItems().size());
+        tableViewEmployees.refresh();
+        ;
     }
 
     // Show all employees

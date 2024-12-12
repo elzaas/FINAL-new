@@ -9,21 +9,21 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="anchormane78" prefHeight="493.0" prefWidth="674.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.employeedb.LoginController">
+<AnchorPane fx:id="anchormane78" prefHeight="527.0" prefWidth="674.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.employeedb.LoginController">
     <children>
         <Label fx:id="label1" layoutX="321.0" layoutY="148.0" prefHeight="26.0" prefWidth="66.0" text="Username" />
         <TextField fx:id="usernameField" layoutX="406.0" layoutY="144.0" prefHeight="33.0" prefWidth="177.0" promptText="username" />
         <Label fx:id="label5" layoutX="321.0" layoutY="190.0" prefHeight="26.0" prefWidth="66.0" text="Password" />
         <PasswordField fx:id="passwordField" layoutX="406.0" layoutY="186.0" prefHeight="33.0" prefWidth="177.0" promptText="password" />
         <Button fx:id="button3" layoutX="427.0" layoutY="234.0" onAction="#handleLogin" prefHeight="26.0" prefWidth="108.0" style="-fx-background-color: #2cb0e6;" text="Login" />
-      <AnchorPane fx:id="aAnchorpane" layoutX="-1.0" prefHeight="493.0" prefWidth="294.0" style="-fx-background-color: #2cb0e6;">
+      <AnchorPane fx:id="aAnchorpane" layoutY="-1.0" prefHeight="527.0" prefWidth="294.0" style="-fx-background-color: #2cb0e6;">
          <children>
-            <Label fx:id="label89" layoutX="5.0" layoutY="257.0" prefHeight="58.0" prefWidth="269.0" text="  Employee Management System">
+            <Label fx:id="label89" layoutX="21.0" layoutY="275.0" prefHeight="58.0" prefWidth="288.0" text="  Employee Management System">
                <font>
                   <Font name="System Bold Italic" size="18.0" />
                </font>
             </Label>
-            <ImageView fx:id="image45" fitHeight="128.0" fitWidth="127.0" layoutX="67.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="image45" fitHeight="128.0" fitWidth="127.0" layoutX="84.0" layoutY="123.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="https://t3.ftcdn.net/jpg/02/50/27/14/360_F_250271442_s1JYQbkJXr4yypcZ2ZTk2xEqkTnE85Zr.jpg" />
                </image>

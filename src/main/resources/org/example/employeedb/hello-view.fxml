@@ -44,7 +44,7 @@
                     <Button layoutX="-46.0" layoutY="309.0" onAction="#handleShowAll" prefHeight="26.0" prefWidth="121.0" style="-fx-background-color: #7AB2D3;" text="Show All" />
                     </children>
                 </AnchorPane>
-                <DatePicker fx:id="datePickerHireDate" layoutX="29.0" layoutY="278.0" prefHeight="26.0" prefWidth="160.0" />
+                <DatePicker fx:id="datePickerHireDate" layoutX="29.0" layoutY="278.0" prefHeight="26.0" prefWidth="160.0" promptText="Hire date" />
                 <TextField fx:id="textFieldName" layoutX="29.0" layoutY="172.0" promptText="Name" />
                 <TextField fx:id="textFieldPosition" layoutX="29.0" layoutY="206.0" promptText="Position" />
                 <TextField fx:id="textFieldSalary" layoutX="29.0" layoutY="243.0" promptText="Salary" />

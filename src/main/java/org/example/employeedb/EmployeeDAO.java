@@ -43,8 +43,8 @@ public class EmployeeDAO {
 
     // Create a new employee record in the database
     public boolean createEmployee(Employee employee) {
-        String sql = "INSERT INTO employee (id, name, position, salary, hire_date, employment_type, phone_number, email, gender,calculateSalary) " +
-                "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?,?)";
+        String sql = "INSERT INTO employee (id, name, position, salary, hire_date, employment_type, phone_number, email, gender, calculateSalary) " +
+                "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         try (Connection conn = getConnection();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setInt(1, employee.getId());
@@ -188,7 +188,11 @@ public class EmployeeDAO {
                 rs.getString("gender")
         );
     }
+
+    // Update gender count dynamically
     public void updateGenderCount() {
+        List<GenderCount> genderCounts = getGenderCount(); // Call without parameters
+
         String sqlMerge = "INSERT INTO gender_count (gender, count) " +
                 "VALUES (?, ?) " +
                 "ON CONFLICT (gender) DO UPDATE " +
@@ -196,13 +200,12 @@ public class EmployeeDAO {
 
         try (Connection conn = getConnection();
              PreparedStatement pstmt = conn.prepareStatement(sqlMerge)) {
-            pstmt.setString(1, "Male");
-            pstmt.setInt(2, getGenderCount("Male"));
-            pstmt.executeUpdate();
 
-            pstmt.setString(1, "Female");
-            pstmt.setInt(2, getGenderCount("Female"));
-            pstmt.executeUpdate();
+            for (GenderCount genderCount : genderCounts) {
+                pstmt.setString(1, genderCount.getGender());
+                pstmt.setInt(2, genderCount.getCount());
+                pstmt.executeUpdate();
+            }
 
             System.out.println("Gender count updated.");
         } catch (SQLException e) {
@@ -211,21 +214,7 @@ public class EmployeeDAO {
         }
     }
 
-    private int getGenderCount(String gender) {
-        String sql = "SELECT COUNT(*) FROM employee WHERE gender = ?";
-        try (Connection conn = getConnection();
-             PreparedStatement pstmt = conn.prepareStatement(sql)) {
-            pstmt.setString(1, gender);
-            try (ResultSet rs = pstmt.executeQuery()) {
-                if (rs.next()) {
-                    return rs.getInt(1);
-                }
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return 0;
-    }
+    // Update salary distribution
     public void updateSalaryDistribution() {
         String sqlMerge = "INSERT INTO salary_distribution (salary_range, count) " +
                 "VALUES (?, ?) " +
@@ -253,6 +242,7 @@ public class EmployeeDAO {
         }
     }
 
+    // Get count of employees in a salary range
     private int getSalaryRangeCount(int minSalary, int maxSalary) {
         String sql = "SELECT COUNT(*) FROM employee WHERE salary BETWEEN ? AND ?";
         try (Connection conn = getConnection();
@@ -269,8 +259,4 @@ public class EmployeeDAO {
         }
         return 0;
     }
-
-
-
-
 }

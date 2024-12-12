@@ -20,14 +20,14 @@ public class HelloApplication extends Application {
         stage.setTitle("Login");
 
         // Set the initial size of the window
-        stage.setWidth(700);
-        stage.setHeight(800);
+        stage.setWidth(850);
+        stage.setHeight(550);
 
         // Optionally, set the minimum and maximum sizes
-        stage.setMinWidth(700);
-        stage.setMinHeight(300);
-        stage.setMaxWidth(700);
-        stage.setMaxHeight(500);
+        stage.setMinWidth(850);
+        stage.setMinHeight(550);
+        stage.setMaxWidth(850);
+        stage.setMaxHeight(550);
 
         stage.show();
     }
