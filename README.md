@@ -111,7 +111,7 @@ The Employee Management System is a JavaFX-based application designed for admini
 1. **Authentication**: Login system for secure access.
 
 3. **Dashboard**:
-   - Displays total, active, and inactive employee counts.
+   - Displays male, female, and salary employee counts.
 4. **Employee Management**:
    - CRUD operations for managing employee data.
 5. **Salary Calculation**:
