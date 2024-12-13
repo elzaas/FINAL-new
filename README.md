@@ -313,6 +313,10 @@ The Employee Management System is a JavaFX-based application designed for admini
 - **PostgreSQL**: Version 13+.
 - **JavaFX**: UI components.
 
+## UML Diagram
+
+![image](<img width="1211" alt="Снимок экрана 2024-12-13 в 19 10 58" src="https://github.com/user-attachments/assets/3f5fdf53-0641-40b2-999c-d0fe52ae6c33" />)
+
 
 ## Presentation
 
