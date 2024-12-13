@@ -315,7 +315,8 @@ The Employee Management System is a JavaFX-based application designed for admini
 
 ## UML Diagram
 
-![image](<img width="1211" alt="Снимок экрана 2024-12-13 в 19 10 58" src="https://github.com/user-attachments/assets/3f5fdf53-0641-40b2-999c-d0fe52ae6c33" />)
+![image](https://github.com/user-attachments/assets/8681c861-8c80-4738-b7a2-fc5fb1cd352b)
+
 
 
 ## Presentation
