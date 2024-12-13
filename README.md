@@ -26,7 +26,7 @@ Asanova Elza :
  - Implementation of backend logic (data connections, queries).
   - Implement classes and their functions
   - Database setup and schema design.
-     - Data connection.
+  - Data connection.
    
 
 
@@ -312,6 +312,7 @@ The Employee Management System is a JavaFX-based application designed for admini
   - `java.util.logging`: Logging events.
 - **PostgreSQL**: Version 13+.
 - **JavaFX**: UI components.
+
 
 ## UML Diagram
 
