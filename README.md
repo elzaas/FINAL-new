@@ -237,7 +237,7 @@ The Employee Management System is a JavaFX-based application designed for admini
 
 
 
-     # Updata
+     # Update
 
 
      ![image](https://github.com/user-attachments/assets/dc1a72d9-c908-433d-b0d6-efed6edc3c30)
@@ -280,7 +280,7 @@ The Employee Management System is a JavaFX-based application designed for admini
   - Property methods for JavaFX bindings.
   - `toString()` for a formatted string representation.
 
-### EmploymentType Enum
+### EmployeeType Enum
 - Defines employment types (FULL_TIME, PART_TIME, CONTRACTOR).
 
 ### EmployeeDAO Class
