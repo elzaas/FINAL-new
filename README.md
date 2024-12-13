@@ -54,3 +54,12 @@
 ## LicenseThis project is licensed under the MIT License. See the LICENSE file for details.
 ## Contact
 For any inquiries or feedback, please contact [Your Name] at your_email@example.com.
+
+
+Presentation:                https://drive.google.com/file/d/1XNgr-GRWakFi8vemxcetupmaM5Mo03MN/view?usp=sharing      
+
+Technical specification:     https://docs.google.com/document/d/1tl3I-XU3Ce-mcSsweaR0Idb4B1ERwnHk/edit?usp=sharing&ouid=100922547310916559233&rtpof=true&sd=true
+
+Video:                             https://drive.google.com/file/d/1EyIBnGSZMs8DrCs2MlYuamvgLLWla03Y/view?usp=sharing
+
+
