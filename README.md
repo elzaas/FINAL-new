@@ -417,3 +417,7 @@ The Employee Management System is a JavaFX-based application designed for admini
 [Click here to watch the video](https://drive.google.com/file/d/1EyIBnGSZMs8DrCs2MlYuamvgLLWla03Y/view?usp=sharing)
 
 
+### YouTube Video 
+[Click here to watch the video](https://youtu.be/3zOR84EkXmQ?si=4M57eTqJ4NeWK3lk)
+
+
