@@ -261,7 +261,7 @@ The Employee Management System is a JavaFX-based application designed for admini
 
 
 
-## Database Connection
+## DATABASE (POSTGRESSQL )
 
 - Database
 
@@ -273,13 +273,39 @@ The Employee Management System is a JavaFX-based application designed for admini
 
 - Stores employee records with fields:
 
--            - id, name, position, salary, hire_date, employment_type, phone_number, email, and gender.
+-            - id,
+-         name,
+-     position,
+-  salary,
+-   hire_date,
+-    employment_type,
+-     phone_number,
+- email,
+-  and gender.
+
+
+
+
+
+
+![image](https://github.com/user-attachments/assets/caeab65a-4bb6-44b6-977b-530deceefcb0)
+
 
 ## Vacation Table:
+
 
             - Stores details about employee vacations, including:
 
                vacation_id, employee_id, vacation_type, start_date, end_date, duration, and status.
+
+
+
+
+
+
+
+             ![image](https://github.com/user-attachments/assets/ec0162ae-8411-4d6c-a11f-cc2fb2cf4e09)
+
 
 ## Gender Count Table:
               -Stores summary data on employee distribution by gender.
@@ -291,6 +317,7 @@ The Employee Management System is a JavaFX-based application designed for admini
 
 
 
+![image](https://github.com/user-attachments/assets/73370a03-1318-44d1-b4c9-8c705cea65bb)
 
 
 
