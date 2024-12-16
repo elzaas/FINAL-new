@@ -256,7 +256,45 @@ The Employee Management System is a JavaFX-based application designed for admini
 ![image](https://github.com/user-attachments/assets/41f196f5-6c21-4a3b-9888-913dff1c46e8)
 
 
+
+
+
+
+
 ## Database Connection
+
+- Database
+
+- The application uses a PostgreSQL database named employee.
+
+- Tables
+
+ - Employee Table:
+
+- Stores employee records with fields:
+
+-            - id, name, position, salary, hire_date, employment_type, phone_number, email, and gender.
+
+## Vacation Table:
+
+            - Stores details about employee vacations, including:
+
+               vacation_id, employee_id, vacation_type, start_date, end_date, duration, and status.
+
+## Gender Count Table:
+              -Stores summary data on employee distribution by gender.
+
+                    - Salary Distribution Table:
+
+                     - Stores summary data on employee distribution by salary range.
+
+
+
+
+
+
+
+
 - **Database**: PostgreSQL database named `employee`.
 - **Tables**:
   - `employee`: Fields include ID, name, position, salary, hire_date, employment_type, phone_number, email, and gender.
@@ -269,6 +307,14 @@ The Employee Management System is a JavaFX-based application designed for admini
   - Update: Modify existing data.
   - Delete: Remove records.
   - Select: Retrieve data.
+ 
+![image](https://github.com/user-attachments/assets/69af9bfc-2beb-4006-b8b0-6366be30bae3)
+
+ 
+
+
+![image](https://github.com/user-attachments/assets/3c3786b8-e5a4-4998-bb51-b662bc2cf84e)
+
 
 ## Code Overview
 ### Employee Class
@@ -314,22 +360,26 @@ The Employee Management System is a JavaFX-based application designed for admini
 - **JavaFX**: UI components.
 
 
-## UML Diagram
+## ER Model
 
-![image](https://github.com/user-attachments/assets/8681c861-8c80-4738-b7a2-fc5fb1cd352b)
+![image](https://github.com/user-attachments/assets/2088eeba-b918-4403-a1b6-eb16f79d0185)
+
+
 
 
 
 ## Presentation
 
-[Click here to view the file](https://drive.google.com/file/d/1XNgr-GRWakFi8vemxcetupmaM5Mo03MN/view?usp=sharing)
+
+
+ [Google Drive](https://drive.google.com/file/d/1XNgr-GRWakFi8vemxcetupmaM5Mo03MN/view?usp=sharing).
 
 
 
 
 
 ### Technical Specification
-[Click here to view the technical specification](https://docs.google.com/document/d/1tl3I-XU3Ce-mcSsweaR0Idb4B1ERwnHk/edit?usp=sharing&ouid=100922547310916559233&rtpof=true&sd=true)
+[Click here to view the technical specification](https://docs.google.com/document/d/181WDIqzaocKsXTZoZqYHzkbj3kP3d09f/edit?usp=sharing&ouid=100922547310916559233&rtpof=true&sd=true)
 
 
 
